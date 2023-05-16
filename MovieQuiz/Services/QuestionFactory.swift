@@ -11,18 +11,18 @@ import UIKit
 
 class QuestionFactory: QuestionFactoryProtocol {
     func requestNextQuestion() -> QuizQuestion? {
-            return nil
-        }
+        return nil
+    }
     
     func requestNextQuestion() {
         guard let index = (0..<questions.count).randomElement() else {
-                delegate?.didReceiveNextQuestion(question: nil)
-                return
-            }
-            
-            let question = questions[safe: index]
-            delegate?.didReceiveNextQuestion(question: question)
-
+            delegate?.didReceiveNextQuestion(question: nil)
+            return
+        }
+        
+        let question = questions[safe: index]
+        delegate?.didReceiveNextQuestion(question: question)
+        
     }
     
     weak var delegate: QuestionFactoryDelegate?
