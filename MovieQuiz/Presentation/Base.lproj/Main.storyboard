@@ -112,17 +112,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DNF-4s-JDP">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="DNF-4s-JDP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FFF-pK-Hep"/>
                             <constraint firstItem="egn-ms-2SZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GiN-0y-25Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egn-ms-2SZ" secondAttribute="trailing" constant="20" id="iiJ-H8-hFJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="egn-ms-2SZ" secondAttribute="bottom" id="keF-kB-NRs"/>
+                            <constraint firstItem="DNF-4s-JDP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oKH-xe-IC5"/>
                             <constraint firstItem="egn-ms-2SZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sx2-M2-sxp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="DNF-4s-JDP" id="P8i-df-uEf"/>
                         <outlet property="counterLabel" destination="IlX-ly-ZQJ" id="ATC-Tb-jBy"/>
                         <outlet property="imageView" destination="QqW-lE-wZ4" id="UUw-BZ-UAy"/>
                         <outlet property="textLabel" destination="Exu-FX-1ZX" id="JlK-9s-8qQ"/>
@@ -133,6 +141,7 @@
             <point key="canvasLocation" x="-55.072463768115945" y="55.580357142857139"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <namedColor name="YP Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
