@@ -49,19 +49,21 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     func show(quiz result: QuizResultsViewModel) {
         let message = presenter.makeResultsMessage()
         
-        let alertModel = UIAlertController(
+        let alert = UIAlertController(
             title: result.title,
             message: message,
             preferredStyle: .alert)
+        
+        alert.view.accessibilityIdentifier = "Game results"
         
         let action = UIAlertAction(title: result.buttonText, style: .default) { [weak self] _ in
             guard let self = self else { return }
             
             self.presenter.restartGame()
         }
-        alertModel.addAction(action)
+        alert.addAction(action)
         
-        self.present(alertModel, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction private func noButtonClicked(_ sender: UIButton) {
